@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import configuration from '../config/configuration';
 import { MongooseModule } from '@nestjs/mongoose';
+import { StatisticsModule } from './statistics/statistics.module';
 import { PokemonModule } from './pokemon/pokemon.module';
 
 @Module({
@@ -13,6 +14,7 @@ import { PokemonModule } from './pokemon/pokemon.module';
       load: [configuration],
     }),
     MongooseModule.forRoot(configuration().database.uri),
+    StatisticsModule,
     PokemonModule,
   ],
   controllers: [AppController],
