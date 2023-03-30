@@ -7,7 +7,7 @@ import {
   ValidateNested,
 } from 'class-validator';
 
-export class CreateDetailPokemonStatsDto {
+export class CreatePokemonDetailsDto {
   @IsObject()
   @IsNotEmpty()
   moves: Map<string, number>;

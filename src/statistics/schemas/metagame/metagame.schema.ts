@@ -5,7 +5,7 @@ export type MetagameDocument = Document & Metagame;
 
 @Schema()
 export class Metagame {
-  @Prop()
+  @Prop({ type: Object })
   weather: {
     weatherless: number;
     sun: number;
@@ -16,7 +16,7 @@ export class Metagame {
     allweather: number;
   };
 
-  @Prop()
+  @Prop({ type: Object })
   matchup: {
     offense: number;
     balance: number;
@@ -29,7 +29,7 @@ export class Metagame {
     trapper: number;
   };
 
-  @Prop()
+  @Prop({ type: Object })
   monotype: {
     monowater: number;
     monofire: number;
