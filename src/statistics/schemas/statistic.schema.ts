@@ -5,10 +5,10 @@ import { Leads } from './leads/leads.schema';
 import { DetailPokemonStats } from './pokemon-details/pokemon-details.schema';
 import { Metagame } from './metagame/metagame.schema';
 
-export type StatistiquesPartiesDocument = Document & StatistiquesParties;
+export type GameStatisticsDocument = Document & GameStatistics;
 
 @Schema()
-export class StatistiquesParties {
+export class GameStatistics {
   @Prop()
   tier: string;
 
